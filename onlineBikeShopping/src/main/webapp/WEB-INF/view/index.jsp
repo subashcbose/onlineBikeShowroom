@@ -1,4 +1,5 @@
   <html>
+  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <head>
@@ -14,7 +15,8 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
-    }
+    } 
+    
     
     /* Add a gray background color and some padding to the footer */
     footer {
@@ -37,6 +39,7 @@
   </style>
 </head>
 <body>
+<form-form>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -140,8 +143,7 @@
   </div>
 </div><br>
 
-
-
+</form-form>
 </body>
 </html>
 

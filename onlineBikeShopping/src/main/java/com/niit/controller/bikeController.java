@@ -1,4 +1,4 @@
-package com.niit.controller;
+  package com.niit.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -69,6 +69,14 @@ public class bikeController {
 		m.setViewName("cart");
 		return m;
 	}
+	@RequestMapping(value="/adduser",method=RequestMethod.GET)
+	public ModelAndView add()
+	{
+		System.out.println("-----add Controller------");
+		m.setViewName("adduser");
+		return m;
+	}
+	
 	
 	
 	

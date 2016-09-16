@@ -4,10 +4,11 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <head>
+
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>"> 
   <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
   <style>
@@ -38,7 +39,6 @@
   </style>
 </head>
 <body>
-<form-form>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -62,11 +62,70 @@
     </div>
   </div>
   </nav>
-  <style>
-body  {
-    background-image:url(resources/images/about2.jpg);
-}
-</style>
+   
+ <h1>Add team page</h1>  
+<p>Here you can add a new team.</p>  
+<form:form method="POST" commandname="user" action="add">  
+<table>  
+<tbody>  
+    <tr>  
+        <td><form:label path="Name">Name:</form:label></td>  
+        <td><form:input path="Name" value="${Name}" readonly="true"/></td>  
+    </tr>  
+    <tr>  
+        <td><form:label path="Email">Email:</form:label></td>  
+        <td><form:input path="Email" value="${Email}"readonly="true"/></td>   
+   </tr>
+   <tr>  
+        <td><form:label path="Password">Email:</form:label></td>  
+        <td><form:input path="Password" value="${Password}"readonly="true"/></td>   
+   </tr>
+   <tr>  
+        <td><form:label path="Conform Password">Conform Password:</form:label></td>  
+        <td><form:input path="Conform Password" value="${Conform Password}"readonly="true"/></td>   
+   </tr>
+   <tr>  
+        <td><form:label path="Mobile Number">Mobile Number:</form:label></td>  
+        <td><form:input path="Mobile Number" value="${Mobile Number}"readonly="true"/></td>   
+   </tr>
+    <tr>  
+        <td><input type="submit" value="Add"></td>  
+        <td></td>  
+        
+    </tr>  
+    <c:if test="${!empty user}">
+    <h2>List Employees</h2>
+ <table align="left" border="1">
+  <tr>
+   <th>User Name</th>
+   <th>User Email</th>
+   <th>User Password</th>
+   <th>User Conform Password</th>
+   <th>User Mobile Number</th>
+           <th>Actions on Row</th>
+  </tr>
+   
+    <c:forEach var="user" items="${listUsers }">
+<tr>
+<td>${user.Name }</td>
+<td>${user.Email }</td>
+<td>${user.Password }</td>
+<td>${user.Conform Password }</td>
+<td>${user.Mobile Number }</td>
+<td>
+<a href="listuser"> list user</a>
+   onclick="return conform('Are you sure?')">Delete</a>
+</td>
+</tr>
+</c:forEach>
+</c:if>
+</table>
+</tbody>  
+</table>  
+</form:form>  
+
+<p><a href="index">Home page</a></p>  
 </form-form>
 </body>
 </html>
+  

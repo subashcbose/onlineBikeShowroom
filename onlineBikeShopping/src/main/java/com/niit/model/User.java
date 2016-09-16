@@ -1,56 +1,52 @@
 package com.niit.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 @Entity
 @Table(name="User")
 public class User {
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private int Name;
 	@Column
-	private String name;
+	private String Email;
 	@Column
-	private String mail;
+	private String Password;
 	@Column
-	private String contact;
+	private String ConformPassword;
 	@Column
-	private String role;
+	private String MobileNumber;
 	
-	public int getId() {
-		return id;
+	public int getName() {
+		return Name;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setName(int name) {
+		Name = name;
 	}
-	public String getName() {
-		return name;
+	public String getEmail() {
+		return Email;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setEmail(String email) {
+		Email = email;
 	}
-	public String getMail() {
-		return mail;
+	public String getPassword() {
+		return Password;
 	}
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setPassword(String password) {
+		Password = password;
 	}
-	public String getContact() {
-		return contact;
+	public String getConformPassword() {
+		return ConformPassword;
 	}
-	public void setContact(String contact) {
-		this.contact = contact;
+	public void setConformPassword(String conformPassword) {
+		ConformPassword = conformPassword;
 	}
-	public String getRole() {
-		return role;
+	public String getMobileNumber() {
+		return MobileNumber;
 	}
-	public void setRole(String role) {
-		this.role = role;
+	public void setMobileNumber(String mobileNumber) {
+		MobileNumber = mobileNumber;
 	}
+	
 	
 }

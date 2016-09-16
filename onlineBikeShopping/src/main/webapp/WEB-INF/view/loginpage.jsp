@@ -2,6 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -37,6 +38,7 @@
   </style>
 </head>
 <body>
+<form-form>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -88,7 +90,6 @@ body  {
       </div>
     </div>
     </div>
-  </form>
  <div class="container">
   <ul class="pager">
     <li class="previous"><a href="<spring:url value="/index"/>">Submit</a></li>
@@ -96,6 +97,6 @@ body  {
   </ul>
 </div>
 </div>
-
+</form-form>
 </body>
 </html>

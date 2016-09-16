@@ -2,6 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -37,7 +38,7 @@
   </style>
 </head>
 <body>
-
+<form-form>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -50,7 +51,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index">Home</a></li>
+         <li class="active"><a href="index">Home</a></li>
         <li><a href="about">About</a></li>
         <li><a href="allproducts">Products</a></li>
         <li><a href="contact">Contact</a></li>
@@ -75,9 +76,7 @@ body  {
       <div class="col-sm-4">
         <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
       </div>
-<div class="col-sm-4">
-        <input class="form-control" id="focusedInput" type="text" placeholder="Last Name...">
-      </div>
+
  </div>
      <div class="form-group">
       <label class="col-sm-2 control-label">Email</label>
@@ -93,48 +92,28 @@ body  {
  </div>
  
 <div class="form-group">
-        <label for="disabledTextInput" class="col-sm-2 control-label"> Re-Enter Password</label>
+        <label for="disabledTextInput" class="col-sm-2 control-label"> Conform Password</label>
         <div class="col-sm-4">
           <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
         </div>
 
       </div>
-      <div class="form-group">
-      <label class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-4">
-        <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
-      </div>
-      </div>
+      
     <div class="form-group">
-      <label class="col-sm-2 control-label">Gender</label>
+      <label class="col-sm-2 control-label">Mobile Number</label>
       <div class="col-sm-4">
         <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
       </div>
     </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Mobile Phone</label>
-      <div class="col-sm-4">
-        <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Address1</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputError">
-      </div>
-    </div>
- <div class="form-group">
-      <label class="col-sm-2 control-label">Address2</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputError">
-      </div>
-    </div>
+    
     <div class="container">
-    <a href="index"> button type="button" class="btn btn-success">Sign up</a>
+    <a href="adduser">Add User</a>
+    <a href="listuser">list User</a>
+    
     </div>
     
   </form>
 </div>
-
+</form-form> 
 </body>
 </html>
