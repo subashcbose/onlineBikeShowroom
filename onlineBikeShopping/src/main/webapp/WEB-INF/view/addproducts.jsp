@@ -68,22 +68,37 @@ body  {
     background-image:url(resources/images/about2.jpg);
 }
 </style>
-<div class="container">
-  <h1>About Us</h1>
-  <p>This part is inside a .container class.</p>
-  <p>The .container class provides a responsive fixed width container.</p>
-</div> 
-</form-form>
-  </body>
+   <h2>Product Information</h2>
+<form:form method="GET" action="./addProduct" commandName="prod">
+<form:errors path="*" cssClass="formErrorBlock"/> 			
+   <table class="table">
   
+  <!--  
+    <tr>
+        <td><form:label path="pid">Product Id</form:label></td>
+        <td><form:input path="pid" /></td>
+    </tr>
+  -->
   
+    <tr>
+					<td><form:label path="pname">Product Name</form:label></td>
+					<td><form:input path="pname"/> </td>
+					<td><font color="red"><errors path="pname"/></font></td>
+				</tr>
+				<tr>
+					<td><form:label path="price">Price </form:label></td>
+					<td><form:input path="price"/> </td>
+					<td><font color="red"><errors path="price"></errors></font></td>
+				</tr>
+    <tr>
+					<td> <input type="submit" value="Add Product"/> </td>
+					<td> <input type="reset" value="Clear Data"/> </td>
+	</tr>
   
-  
+    
+</table>  
+</form:form>
+
+
+</body>
    
-  
-  
-  
-  </html>
-  
-  
-  

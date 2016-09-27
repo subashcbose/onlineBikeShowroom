@@ -47,17 +47,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="loginpage">Login</a>
+        <a class="navbar-brand" href="<spring:url value="loginpage"/>">Login</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-         <li class="active"><a href="index">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="allproducts">Products</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li class="active"><a href="<spring:url value="/"/>">Home</a></li>
+        <li><a href="<spring:url value="about"/>">About</a></li>
+        <li><a href="<spring:url value="allproducts"/>">Products</a></li>
+        <li><a href="<spring:url value="contact"/>">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="cart"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
+        <li><a href="<spring:url value="cart"/>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
       </ul>
     </div>
   </div>
@@ -68,52 +68,38 @@ body  {
 }
 </style>
 
-<div class="container">
-  <h2>Create a account</h2>
-  <form class="form-horizontal" role="form">
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-4">
-        <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
-      </div>
-
- </div>
-     <div class="form-group">
-      <label class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-4">
-        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here...">
-      </div>
-    </div>
-      <div class="form-group">
-        <label for="disabledTextInput" class="col-sm-2 control-label">Password</label>
-        <div class="col-sm-4">
-          <input type="text" id="disabledInput" class="form-control" placeholder="Disabled input">
-        </div>
- </div>
+<h2>Customer Information</h2>
+<form:form action="./addUser" commandName="cust" method="POST">
+<form:errors path="*" cssClass="errorblock" element="div" />
  
-<div class="form-group">
-        <label for="disabledTextInput" class="col-sm-2 control-label"> Conform Password</label>
-        <div class="col-sm-4">
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-        </div>
-
-      </div>
-      
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Mobile Number</label>
-      <div class="col-sm-4">
-        <input class="form-control" id="focusedInput" type="text" placeholder="First Name...">
-      </div>
-    </div>
-    
-    <div class="container">
-    <a href="adduser">Add User</a>
-    <a href="listuser">list User</a>
-    
-    </div>
-    
-  </form>
-</div>
-</form-form> 
+			<table class="table">
+				<tr>
+					<td><form:label path="name">Your Name</form:label></td>
+					<td><form:input path="name"/> </td>
+					<td><font color="red"><errors path="name"/></font></td>
+				</tr>
+				<tr>
+					<td><form:label path="email">Email Id </form:label></td>
+					<td><form:input path="email"/> </td>
+					<td><font color="red"><errors path="email"></errors></font></td>
+				</tr>
+			<tr>
+					<td><form:label path="password">Password</form:label></td>
+					<td><form:input type='password' path="password"/> </td>
+					<td><font color="red"><errors path="password"/></font></td>
+				</tr>
+			
+				
+				<tr>
+      <td colspan="2">
+            <input type="submit" value="SAVE"/>
+            <input type="reset" value="Clear Data"/>
+        </td>
+    </tr>
+			</table>
+		
+		</form:form>
+		
+	
 </body>
 </html>

@@ -1,54 +1,75 @@
 package com.niit.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name="Product")
 public class Product {
-@Id
-@Column
-@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
-@Column
-	private String description;
-@Column
-	private int price;
-@Column
-	private String category_id;
-@Column
-	private String supplier_id;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int pid;
+	@Column
+	@NotEmpty(message="Enter the Product Name")
+	private String pname;
+	@Column
+	private double price;
 	
-	public int getId() {
-		return id;
+	/**
+	 * @return the pid
+	 */
+	public int getPid() {
+		return pid;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	/**
+	 * @param pid the pid to set
+	 */
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
-	public String getDescription() {
-		return description;
+
+	/**
+	 * @return the pname
+	 */
+	public String getPname() {
+		return pname;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+
+	/**
+	 * @param pname the pname to set
+	 */
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
-	public int getPrice() {
+
+	/**
+	 * @return the pricetag
+	 */
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+
+	/**
+	 * @param pricetag the pricetag to set
+	 */
+	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getCategory_id() {
-		return category_id;
-	}
-	public void setCategory_id(String category_id) {
-		this.category_id = category_id;
-	}
-	public String getSupplier_id() {
-		return supplier_id;
-	}
-	public void setSupplier_id(String supplier_id) {
-		this.supplier_id = supplier_id;
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + "]";
 	}
 	
-	
-		}
+}

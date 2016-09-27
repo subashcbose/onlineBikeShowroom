@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>"> 
-  <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
+  <script src="<spring:url value="resources/js/jquery.min.js"/>"></script> 
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -53,9 +53,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<spring:url value="/"/>">Home</a></li>
-        <li><a href="<spring:url value="about"/>">About</a></li>
-        <li><a href="<spring:url value="allproducts"/>">Products</a></li>
-        <li><a href="<spring:url value="contact"/>">Contact</a></li>
+        <li><a href="<spring:url value="addproducts"/>">Add Products</a></li>
+        <li><a href="<spring:url value="viewproducts"/>">View Product</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<spring:url value="cart"/>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
@@ -68,22 +67,3 @@ body  {
     background-image:url(resources/images/about2.jpg);
 }
 </style>
-<div class="container">
-  <h1>About Us</h1>
-  <p>This part is inside a .container class.</p>
-  <p>The .container class provides a responsive fixed width container.</p>
-</div> 
-</form-form>
-  </body>
-  
-  
-  
-  
-   
-  
-  
-  
-  </html>
-  
-  
-  

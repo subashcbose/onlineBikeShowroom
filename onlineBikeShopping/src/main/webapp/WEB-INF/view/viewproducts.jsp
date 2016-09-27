@@ -4,11 +4,10 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <head>
-
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>"> 
+  <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>">
   <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
   <style>
@@ -48,42 +47,43 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<spring:url value="loginpage"/>">Login</a>
+        <a class="navbar-brand" href="<spring:url value="loginpage"/>">Login</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<spring:url value="/"/>">Home</a></li>
         <li><a href="<spring:url value="about"/>">About</a></li>
-        <li><a href="<spring:url value="allproducts"/>">Products</a></li>
-        <li><a href="<spring:url value="contact"/>">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="<spring:url value="cart"/>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
-      </ul>
+       
     </div>
   </div>
-  </nav>
-  <style>
+</nav>
+<style>
 body  {
-    background-image:url(resources/images/about2.jpg);
+    background-image:url(resources/images/Pulredab.jpg);
 }
 </style>
-<div class="container">
-  <h1>About Us</h1>
-  <p>This part is inside a .container class.</p>
-  <p>The .container class provides a responsive fixed width container.</p>
-</div> 
-</form-form>
-  </body>
-  
-  
-  
-  
-   
-  
-  
-  
-  </html>
-  
-  
-  
+
+<h2>Your details Are As Follows:</h2>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<td>Product Id</td>
+					<td>Product Name</td>
+					<td>Product Price</td>
+				</tr>
+			</thead>
+			<tbody class="table-hover">
+			<c:forEach items="${ls}" var="data">
+				<tr>
+					<td>${data.pid}</td>
+					<td>${data.pname}</td>
+					<td>${data.price}</td>
+					<td><a href="updPd/${data.pid}">Update</a></td>
+					<td><a href="delPd/${data.pid}">Delete</a></td>
+				</tr>
+			</c:forEach>
+			</tbody>
+		</table>
+	</body>
+</html>

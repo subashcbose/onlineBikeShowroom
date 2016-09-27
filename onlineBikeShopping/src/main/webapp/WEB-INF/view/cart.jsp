@@ -47,17 +47,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="loginpage">Login</a>
+     <a class="navbar-brand" href="<spring:url value="loginpage"/>">Login</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="allproducts">Products</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li class="active"><a href="<spring:url value="/"/>">Home</a></li>
+        <li><a href="<spring:url value="about"/>">About</a></li>
+        <li><a href="<spring:url value="allproducts"/>">Products</a></li>
+        <li><a href="<spring:url value="contact"/>">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="cart"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
+        <li><a href="<spring:url value="cart"/>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
       </ul>
     </div>
   </div>

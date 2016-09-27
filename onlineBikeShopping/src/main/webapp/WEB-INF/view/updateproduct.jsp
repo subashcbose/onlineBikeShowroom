@@ -1,22 +1,22 @@
 <html>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-
 <head>
-
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>"> 
+  <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>">
   <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
+  
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
+    /* Remove the navbar's default margin-bott`om and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
-    }
+    } 
+    
     
     /* Add a gray background color and some padding to the footer */
     footer {
@@ -56,34 +56,39 @@
         <li><a href="<spring:url value="about"/>">About</a></li>
         <li><a href="<spring:url value="allproducts"/>">Products</a></li>
         <li><a href="<spring:url value="contact"/>">Contact</a></li>
+          <li><a href="<spring:url value="viewproducts"/>">all product</a></li>
+          <li><a href="<spring:url value="addproducts"/>">add product</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<spring:url value="cart"/>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
       </ul>
     </div>
   </div>
-  </nav>
-  <style>
-body  {
-    background-image:url(resources/images/about2.jpg);
-}
-</style>
-<div class="container">
-  <h1>About Us</h1>
-  <p>This part is inside a .container class.</p>
-  <p>The .container class provides a responsive fixed width container.</p>
-</div> 
-</form-form>
-  </body>
-  
-  
-  
-  
-   
-  
-  
-  
-  </html>
-  
-  
-  
+</nav>
+<h2>Update Product</h2>
+		<form:form method="POST" action="/onlineBikeShopping/upd">
+			<table>
+
+				<tr>
+					<td><form:label path="pid">Product Id:</form:label></td>
+					<td><form:input path="pid" /></td>
+				</tr>
+				<tr>
+					<td><form:label path="pname">Product Name:</form:label></td>
+					<td><form:input path="pname" /></td>
+				</tr>
+				<tr>
+					<td><form:label path="price"> Price</form:label></td>
+					<td><form:input path="price" /></td>
+				</tr>
+
+				<tr>
+					<td><input type="submit" value="Update" /></td>
+
+					<td><input type="reset" value="Clear Data"></td>
+				</tr>
+			</table>
+		</form:form>
+	
+</body>
+</html>
